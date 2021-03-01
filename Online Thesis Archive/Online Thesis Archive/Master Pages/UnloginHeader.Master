@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UnloginHeader.Master.cs" Inherits="Online_Thesis_Archive.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server">
+        </asp:ContentPlaceHolder>
+     </title>
+    <link href="../icons8_museum.ico" rel="icon" type="image/png"/>
+    <link href="../css/style.css" rel="stylesheet" type="text/css"/>
+        <asp:ContentPlaceHolder ID="header" runat="server">
+        </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form2" runat="server">
+
+    <!-- Navigation -->
+   
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">CKCST Online Thesis Archiving</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+    
+            <li class="nav-item">
+                <a class="nav-link" href="../pages/index.aspx">Thesis</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About CKCST</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+            </ul>
+            <div class="nav navbar-nav navbar-right">
+                <div class="form-inline my-2 my-lg-0">
+                    <asp:TextBox ID="username" CssClass="form-control mr-sm-2"  BorderStyle="None" runat="server" ForeColor="Black" placeholder="Username"></asp:TextBox>
+                    <asp:TextBox ID="password" CssClass="form-control mr-sm-2" BorderStyle="None" type="password" runat="server" placeholder="Password" ForeColor="Black"></asp:TextBox>
+                    <asp:Button ID="btnLogin" CssClass="btn btn-success my-2 my-sm-0" runat="server" Text="Login" OnClick="btnLogin_Click"/>
+                </div>
+            </div>
+          </div>
+        </nav>
+
+    <!-- End Navigation -->
+    
+    <br />
+    
+        <div class="container">
+
+        <asp:ContentPlaceHolder ID="contentBody" runat="server">        
+        </asp:ContentPlaceHolder>
+
+        </div>
+        </form>
+</body>
+</html>
